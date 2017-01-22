@@ -35,7 +35,7 @@ class Psswrd {
     }
 
     /**
-     * _getRandomPassword - Generate a (by default cryptographically) secure random password
+     * getRandomPassword - Generate a (by default cryptographically) secure random password
      *
      * @param  {number} length the length of password being generated
      * @return {string}        generated password
