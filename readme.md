@@ -2,6 +2,9 @@
 
 Psswrd allows client-sided generation of cryptographically secure random passwords.
 
+## Demonstration
+A simple demonstration has been set up. It and it's source code can be found [here](http://inmomentum.io/psswrd/index.html).
+
 ## Installation
 
 Download [psswrd.js](https://raw.githubusercontent.com/InMomentum/Psswrd/master/dist/psswrd.js) or the minified version [psswrd.min.js](https://raw.githubusercontent.com/InMomentum/Psswrd/master/dist/psswrd.min.js).
