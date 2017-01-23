@@ -1,41 +1,41 @@
 class Psswrd {
 
-    constructor() {
+    constructor(args = {}) {
 
         /**
          * Force to generate cryptographically random values
          * @type {boolean}
          */
-        this.strict = true;
+        this.strict = (typeof args.strict === 'undefined') ? true : args.strict;
 
         /**
          * Default password length
          * @type {number}
          */
-        this.length = 12;
+        this.length = (typeof args.length === 'undefined') ? 12 : args.length;
 
         /**
          * Default alphabetic characters
          * @type {string}
          */
-        this.letters = 'AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
+        this.letters = (typeof args.letters === 'undefined') ? 'AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz' : args.letters;
 
         /**
          * Default numeric characters
          * @type {string}
          */
-        this.numbers = '0123456789';
+        this.numbers = (typeof args.numbers === 'undefined') ? '0123456789' : args.numbers;
 
         /**
          * Default special characters
          * @type {string}
          */
-        this.special = '!$%@#';
+        this.special = (typeof args.special === 'undefined') ? '!$%@#' : args.special;
 
     }
 
     /**
-     * _getRandomPassword - Generate a (by default cryptographically) secure random password
+     * getRandomPassword - Generate a (by default cryptographically) secure random password
      *
      * @param  {number} length the length of password being generated
      * @return {string}        generated password
