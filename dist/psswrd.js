@@ -44,7 +44,7 @@ var Psswrd = function () {
     }
 
     /**
-     * _getRandomPassword - Generate a (by default cryptographically) secure random password
+     * getRandomPassword - Generate a (by default cryptographically) secure random password
      *
      * @param  {number} length the length of password being generated
      * @return {string}        generated password
@@ -53,9 +53,12 @@ var Psswrd = function () {
 
     _createClass(Psswrd, [{
         key: 'getRandomPassword',
-        value: function getRandomPassword(length) {
+        value: function getRandomPassword() {
+            var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.length;
+
             if (!Number.isInteger(length)) {
-                length = this.length;
+                throw new Error("Length must be an integer.");
+                return;
             }
 
             var characters = this._getCharacters();
