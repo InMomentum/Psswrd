@@ -40,9 +40,10 @@ class Psswrd {
      * @param  {number} length the length of password being generated
      * @return {string}        generated password
      */
-    getRandomPassword(length) {
+    getRandomPassword(length = this.length) {
         if (!Number.isInteger(length)) {
-            length = this.length;
+            throw new Error("Length must be an integer.");
+            return;
         }
 
         var characters = this._getCharacters();
